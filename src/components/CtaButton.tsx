@@ -29,9 +29,13 @@ export default function CtaButton({
   size = "md",
   className = "",
 }: CtaButtonProps) {
+  const isExternal = /^https?:\/\//.test(href);
+
   return (
     <Link
       href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold uppercase tracking-wide transition-colors duration-200 ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`}
     >
       {children}

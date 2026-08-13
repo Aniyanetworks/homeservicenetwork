@@ -269,32 +269,6 @@ export const SPONSOR_TIERS = [
   { name: "Community Partner", blurb: "Support the Grand Opening and get listed as a community partner." },
 ];
 
-export const TICKETS = [
-  {
-    name: "General Admission",
-    price: "$XX",
-    features: ["Full event access (4:00 PM – 11:00 PM)", "Food & drinks", "Networking & Padel access", "Games, challenges & raffle entry"],
-    featured: false,
-  },
-  {
-    name: "VIP",
-    price: "$XX",
-    features: [
-      "Everything in General",
-      "Priority check-in",
-      "VIP networking reception",
-      "Reserved Padel court time",
-    ],
-    featured: true,
-  },
-  {
-    name: "Group / Team",
-    price: "$XX",
-    features: ["3+ attendees from one company", "Full event access (4:00 PM – 11:00 PM)", "Food & drinks", "Networking & Padel access"],
-    featured: false,
-  },
-];
-
 export const FAQS = [
   {
     q: `Who should attend ${EVENT.name}?`,
