@@ -11,17 +11,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-navy-950: #070c17;
-  --color-navy-900: #0b1424;
-  --color-navy-800: #121d33;
-  --color-navy-700: #1b2942;
+  --color-navy-950: #071414;
+  --color-navy-900: #0b1f1f;
+  --color-navy-800: #123030;
+  --color-navy-700: #1b4343;
 
-  --color-brand-blue-500: #2f6fed;
-  --color-brand-blue-600: #2258d6;
+  --color-brand-blue-500: #17a6a3;
+  --color-brand-blue-600: #0f8b89;
 
-  --color-brand-amber-400: #fbbf24;
-  --color-brand-amber-500: #f59e0b;
-  --color-brand-amber-600: #d97706;
+  --color-brand-amber-400: #f0895c;
+  --color-brand-amber-500: #e2672e;
+  --color-brand-amber-600: #c1541f;
 }
 
 body {

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { EVENT, LINKS, NAV_LINKS } from "@/lib/content";
+import { LINKS, NAV_LINKS } from "@/lib/content";
 import CtaButton from "./CtaButton";
 
 export default function Header() {
@@ -11,12 +12,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="#top" className="flex items-baseline gap-2 text-white">
-          <span className="text-lg font-extrabold tracking-tight sm:text-xl">
-            {EVENT.shortName}
-          </span>
-          <span className="hidden text-xs font-medium text-white/50 sm:inline">
-            {EVENT.name}
+        <Link href="#top" className="flex items-center">
+          <span className="inline-flex items-center rounded-lg bg-white/95 px-3 py-1.5 shadow-sm">
+            <Image
+              src="/logo-trimmed.png"
+              alt="Home Service Network TX"
+              width={1376}
+              height={185}
+              priority
+              className="h-6 w-auto sm:h-7"
+            />
           </span>
         </Link>
 
