@@ -8,8 +8,8 @@ export default function Sponsors() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Sponsors"
-            title="Backed by home services industry partners."
+            eyebrow="Founding Partners"
+            title="Backed by the companies launching Home Service Network+."
           />
           <CtaButton href={LINKS.becomeSponsor} variant="ghost" size="md" className="shrink-0">
             Become a Sponsor

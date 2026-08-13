@@ -4,17 +4,25 @@
 // content meant to be edited directly.
 
 export const EVENT = {
-  name: "Home Services Network",
-  shortName: "HSN",
-  tagline: "Where Home Service Leaders Build, Connect & Grow",
+  name: "Home Service Network+",
+  shortName: "HSN+",
+  eventTitle: "Grand Opening",
+  tagline: "Connect • Learn • Build Relationships • Have Fun",
   subTagline:
-    "A one-day business community event for owners, leaders, and executives across the home services industry.",
+    "The official Grand Opening of Home Service Network+ — an evening of business connections, Padel, and community for Home Service industry leaders in Austin, Texas.",
+  closingHeadline: "One Night. Hundreds Of Connections. The Beginning Of A Community.",
+  closingBody: "Where the Home Service industry comes together to connect, grow, and build relationships.",
   city: "Austin, Texas",
   cityShort: "Austin, TX",
   date: "September 12, 2026",
   dateShort: "Sept 12, 2026",
   dateISO: "2026-09-12",
+  time: "4:00 PM – 11:00 PM",
   venue: "Venue to be announced",
+  founder: {
+    name: "Isael Garcia",
+    title: "Founder, Home Service Network+",
+  },
 };
 
 export const LINKS = {
@@ -53,45 +61,219 @@ export const WHY_ATTEND = [
     body: "Hear what's actually working in home services right now, from people running it.",
   },
   {
-    title: "A Day Off the Truck",
-    body: "Step out of the day-to-day and think like an owner, not an operator, for a day.",
+    title: "A Night Off the Clock",
+    body: "Step away from the job site and spend an evening thinking like an owner, not an operator.",
   },
   {
     title: "Community That Lasts",
-    body: "Home Services Network is built to be a relationship, not a one-day event.",
+    body: "Home Service Network+ is built to be a relationship, not a one-night event.",
   },
 ];
 
+export const NETWORKING_AUDIENCE = [
+  "Home Service business owners",
+  "Contractors",
+  "Suppliers",
+  "Manufacturers",
+  "Technology companies",
+  "Finance & service providers",
+  "Industry leaders",
+  "Potential referral partners",
+];
+
+export const NETWORKING_HIGHLIGHTS = [
+  "Open networking",
+  "Sponsor booth experiences",
+  "Padel social play & challenges",
+  "Business networking games",
+  "Raffles & giveaways",
+  "Food and drinks",
+];
+
+export const PADEL_CHALLENGES = [
+  "Target Challenge",
+  "Serve Accuracy Challenge",
+  "King of the Court",
+  "Beat the Pro Challenge",
+  "Partner Challenge",
+  "Longest Rally Challenge",
+];
+
 export const FEATURED_SPEAKER = {
-  name: "Speaker Name",
-  title: "Title / Company — details coming soon",
-  bio: "Bio placeholder — swap in the featured speaker's background, credentials, and why they're relevant to home services owners once confirmed.",
+  name: "Sean Michael Crane",
+  title: "Featured Keynote Speaker",
+  bio: "A powerful one-hour keynote on Leadership, Discipline, Mindset, Business, and Personal Growth — the centerpiece presentation of the Home Service Network+ Grand Opening.",
   photo: null as string | null,
 };
 
-export const AGENDA = [
-  { time: "8:00 AM", title: "Doors Open & Check-In", detail: "Coffee, networking, and registration." },
-  { time: "9:00 AM", title: "Welcome & Opening Remarks", detail: "Kicking off Home Services Network Austin." },
-  { time: "9:30 AM", title: "Featured Speaker Session", detail: "Main stage keynote." },
-  { time: "11:00 AM", title: "Panel: Scaling a Home Services Business", detail: "Owner-led discussion." },
-  { time: "12:30 PM", title: "Lunch & Networking", detail: "Structured networking over lunch." },
-  { time: "2:00 PM", title: "Padel Experience", detail: "Padel courts open for attendees." },
-  { time: "5:00 PM", title: "Closing Reception", detail: "Drinks, giveaways, and final networking." },
+type AgendaItem = {
+  time: string;
+  title: string;
+  subtitle?: string;
+  bullets?: string[];
+  sectionLabel?: string;
+  featured?: boolean;
+};
+
+export const AGENDA: AgendaItem[] = [
+  {
+    time: "4:00 PM – 4:30 PM",
+    title: "Arrival • Check-In • Welcome",
+    subtitle: "The Home Service Network+ Grand Opening officially begins.",
+    bullets: [
+      "Guest and VIP check-in",
+      "Welcome drinks",
+      "Sponsor booths open",
+      "Meet the Founding Partners",
+      "Music and social atmosphere",
+      "Padel courts open",
+      "Registration for games, challenges, raffles, and prizes",
+    ],
+  },
+  {
+    time: "4:30 PM – 6:00 PM",
+    title: "Business Networking Experience",
+    subtitle: "The first part of the event is dedicated to creating genuine business connections.",
+    bullets: NETWORKING_HIGHLIGHTS,
+  },
+  {
+    time: "6:00 PM – 6:10 PM",
+    title: "Official Opening Ceremony",
+    subtitle: `${EVENT.founder.name} — ${EVENT.founder.title}`,
+    sectionLabel: "Main Program",
+    bullets: [
+      "Why Home Service Network+ was created",
+      "The vision for building the Home Service business community",
+      "Recognition of Founding Partners",
+      "Introduction to the evening program",
+    ],
+  },
+  {
+    time: "6:10 PM – 6:20 PM",
+    title: "Presenting Founding Partner Spotlight",
+    subtitle: "10-Minute Stage Presentation",
+    bullets: [
+      "Their company",
+      "Their mission",
+      "Products or services",
+      "How they support Home Service businesses",
+      "Opportunities available to attendees",
+    ],
+  },
+  {
+    time: "6:20 PM – 6:45 PM",
+    title: "Gold Founding Partner Spotlights",
+    subtitle: "Up to 5 minutes on stage, each",
+    bullets: ["An opportunity to introduce their company and explain how they can help Home Service business owners."],
+  },
+  {
+    time: "6:45 PM – 7:00 PM",
+    title: "Founding Partner Recognition & Giveaways",
+    bullets: [
+      "Silver Founding Partner recognition",
+      "Bronze Founding Partner recognition",
+      "Sponsor acknowledgments",
+      "Giveaways",
+      "Raffle winners",
+      "Special announcements",
+    ],
+  },
+  {
+    time: "7:00 PM – 7:25 PM",
+    title: "Networking • Food • Drinks",
+    subtitle: "A short networking break before the keynote. Guests begin moving toward the keynote area at 7:20 PM.",
+    bullets: [
+      "Food and drinks",
+      "Sponsor booth visits",
+      "Business introductions",
+      "Photos",
+      "Meet other attendees",
+      "Connect with Founding Partners",
+    ],
+  },
+  {
+    time: "7:25 PM – 7:30 PM",
+    title: "Keynote Introduction",
+    subtitle: "Official introduction of our featured keynote speaker.",
+  },
+  {
+    time: "7:30 PM – 8:30 PM",
+    title: `Featured Keynote: ${FEATURED_SPEAKER.name}`,
+    subtitle: "Leadership • Discipline • Mindset • Business • Personal Growth",
+    featured: true,
+    bullets: [
+      "The centerpiece presentation of the Home Service Network+ Grand Opening",
+      "Networking activities and games pause so attendees can participate in the full experience",
+    ],
+  },
+  {
+    time: "8:30 PM – 8:45 PM",
+    title: "Keynote Closing • Recognition • Group Photo",
+    bullets: [
+      `Thank you and recognition for ${FEATURED_SPEAKER.name}`,
+      "Founding Partner recognition",
+      "Official Home Service Network+ group photo",
+      "Announcement of evening prizes and activities",
+    ],
+  },
+  {
+    time: "8:45 PM – 10:30 PM",
+    title: "Networking After Hours",
+    subtitle: "The business program transitions into a high-energy social networking experience.",
+    bullets: [
+      "Open networking",
+      "Padel social play & challenges",
+      "Business connection games",
+      "Sponsor experiences",
+      "Music",
+      "Food and drinks",
+      "Raffles & giveaways",
+      "Prize challenges",
+    ],
+  },
+  {
+    time: "10:30 PM – 10:45 PM",
+    title: "Grand Prizes & Final Raffle",
+    bullets: [
+      "Padel challenge winners",
+      "Game winners",
+      "Sponsor prizes",
+      "Grand raffle",
+      "Special giveaways",
+    ],
+  },
+  {
+    time: "10:45 PM – 11:00 PM",
+    title: "Closing Ceremony",
+    bullets: [
+      "Thank you to attendees",
+      "Thank you to Founding Partners",
+      "Final sponsor recognition",
+      "Community vision",
+      "Announcement of what's next for Home Service Network+",
+    ],
+  },
 ];
 
 export const SPONSOR_TIERS = [
-  { name: "Presenting", blurb: "Top-tier brand visibility across the entire event." },
-  { name: "Gold", blurb: "Premium placement and stage recognition." },
-  { name: "Silver", blurb: "Strong visibility across event materials." },
-  { name: "Bronze", blurb: "Logo placement and attendee list access." },
-  { name: "Community", blurb: "Support the event and get listed as a partner." },
+  {
+    name: "Presenting Founding Partner",
+    blurb: "The exclusive main sponsor spotlight, including a 10-minute stage presentation to the full room.",
+  },
+  {
+    name: "Gold Founding Partner",
+    blurb: "Up to 5 minutes on stage to introduce your company and how you support Home Service businesses.",
+  },
+  { name: "Silver Founding Partner", blurb: "Founding Partner recognition on stage during the program." },
+  { name: "Bronze Founding Partner", blurb: "Founding Partner recognition on stage during the program." },
+  { name: "Community Partner", blurb: "Support the Grand Opening and get listed as a community partner." },
 ];
 
 export const TICKETS = [
   {
     name: "General Admission",
     price: "$XX",
-    features: ["Full-day event access", "Lunch & refreshments", "Networking sessions", "Padel Experience access"],
+    features: ["Full event access (4:00 PM – 11:00 PM)", "Food & drinks", "Networking & Padel access", "Games, challenges & raffle entry"],
     featured: false,
   },
   {
@@ -99,7 +281,7 @@ export const TICKETS = [
     price: "$XX",
     features: [
       "Everything in General",
-      "Priority seating",
+      "Priority check-in",
       "VIP networking reception",
       "Reserved Padel court time",
     ],
@@ -108,23 +290,27 @@ export const TICKETS = [
   {
     name: "Group / Team",
     price: "$XX",
-    features: ["3+ attendees from one company", "Full-day event access", "Lunch & refreshments", "Networking sessions"],
+    features: ["3+ attendees from one company", "Full event access (4:00 PM – 11:00 PM)", "Food & drinks", "Networking & Padel access"],
     featured: false,
   },
 ];
 
 export const FAQS = [
   {
-    q: "Who should attend Home Services Network?",
+    q: `Who should attend ${EVENT.name}?`,
     a: "Owners, leaders, and executives across HVAC, Plumbing, Electrical, Roofing, Restoration, Remodeling, Pest Control, Landscaping, and related home service industries.",
   },
   {
-    q: "Where is the event held?",
-    a: "Austin, Texas on September 12, 2026. Exact venue details will be sent after registration.",
+    q: "Where and when is the event held?",
+    a: `Austin, Texas on ${EVENT.date}, from ${EVENT.time}. Exact venue details will be sent after registration.`,
   },
   {
     q: "Is this just a networking event?",
-    a: "Networking, Padel, and giveaways are featured parts of the day, but Home Services Network is primarily a business community event focused on real connections and growth.",
+    a: `Networking, Padel, and giveaways are featured parts of the evening, but ${EVENT.name} is primarily a business community event focused on real connections and growth.`,
+  },
+  {
+    q: "Is this a padel tournament?",
+    a: "No — instead of a traditional tournament, attendees can join short, fun Padel challenges and games throughout the event for prizes. No experience required.",
   },
   {
     q: "What's included in my ticket?",
@@ -132,7 +318,7 @@ export const FAQS = [
   },
   {
     q: "How do I become a sponsor?",
-    a: "Use the \"Become a Sponsor\" button anywhere on this page to submit your application.",
+    a: "Use the \"Become a Sponsor\" button anywhere on this page to submit your application and become a Founding Partner.",
   },
   {
     q: "What should I bring?",

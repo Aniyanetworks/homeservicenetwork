@@ -1,4 +1,4 @@
-import { AGENDA } from "@/lib/content";
+import { AGENDA, EVENT } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
 export default function Agenda() {
@@ -7,22 +7,75 @@ export default function Agenda() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Event Agenda"
-          title={`Your day at ${"Home Services Network"}.`}
-          body="A full schedule for the day — subject to change as we finalize speakers and sessions."
+          title={`${EVENT.time} · ${EVENT.date}`}
+          body="The full run of show for the Grand Opening — subject to change as we finalize final details."
         />
 
-        <div className="mt-12 flex flex-col divide-y divide-navy-900/10 overflow-hidden rounded-2xl border border-navy-900/10">
+        <div className="mt-12 flex flex-col">
           {AGENDA.map((item) => (
-            <div
-              key={item.time}
-              className="flex flex-col gap-2 p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6"
-            >
-              <div className="text-sm font-bold text-brand-blue-600 sm:w-28 sm:shrink-0">
-                {item.time}
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-navy-950 sm:text-lg">{item.title}</h3>
-                <p className="mt-0.5 text-sm text-navy-700/60">{item.detail}</p>
+            <div key={item.time}>
+              {item.sectionLabel && (
+                <div className="mb-4 mt-10 text-center text-xs font-extrabold uppercase tracking-[0.2em] text-brand-amber-500 first:mt-0">
+                  {item.sectionLabel}
+                </div>
+              )}
+
+              <div
+                className={`mb-3 rounded-2xl border p-5 sm:p-6 ${
+                  item.featured
+                    ? "border-brand-amber-500 bg-navy-950"
+                    : "border-navy-900/10 bg-navy-950/[0.02]"
+                }`}
+              >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-8">
+                  <div
+                    className={`text-sm font-bold sm:w-40 sm:shrink-0 ${
+                      item.featured ? "text-brand-amber-400" : "text-brand-blue-600"
+                    }`}
+                  >
+                    {item.time}
+                  </div>
+
+                  <div className="flex-1">
+                    <h3
+                      className={`font-extrabold tracking-tight ${
+                        item.featured ? "text-xl sm:text-2xl" : "text-base sm:text-lg"
+                      } ${item.featured ? "text-white" : "text-navy-950"}`}
+                    >
+                      {item.title}
+                    </h3>
+
+                    {item.subtitle && (
+                      <p
+                        className={`mt-1 text-sm font-semibold ${
+                          item.featured ? "text-brand-amber-400" : "text-navy-700/70"
+                        }`}
+                      >
+                        {item.subtitle}
+                      </p>
+                    )}
+
+                    {item.bullets && item.bullets.length > 0 && (
+                      <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+                        {item.bullets.map((bullet) => (
+                          <li
+                            key={bullet}
+                            className={`flex items-start gap-2 text-sm ${
+                              item.featured ? "text-white/70" : "text-navy-700/60"
+                            }`}
+                          >
+                            <span
+                              className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${
+                                item.featured ? "bg-brand-amber-500" : "bg-brand-blue-600"
+                              }`}
+                            />
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}

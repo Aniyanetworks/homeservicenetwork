@@ -8,11 +8,12 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-navy-950 text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 text-center">
-          <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-            Ready to join {EVENT.shortName}?
+          <h2 className="max-w-2xl text-2xl font-extrabold tracking-tight sm:text-3xl">
+            {EVENT.closingHeadline}
           </h2>
-          <p className="max-w-md text-white/60">
-            {EVENT.city} · {EVENT.date}
+          <p className="max-w-md text-white/60">{EVENT.closingBody}</p>
+          <p className="text-sm text-white/40">
+            {EVENT.city} · {EVENT.date} · {EVENT.time}
           </p>
           <CtaButton href={LINKS.getTickets} size="lg">
             Get Tickets

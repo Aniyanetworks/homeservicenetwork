@@ -7,11 +7,11 @@ export default function BecomeSponsor() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 rounded-3xl bg-navy-950 px-6 py-14 text-center text-white sm:px-16">
           <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Put your brand in front of home services leaders.
+            Become a Founding Partner.
           </h2>
           <p className="max-w-xl text-white/70">
-            Sponsor {EVENT.name} in {EVENT.city} and connect directly with owners and
-            executives across the industry.
+            Sponsor the {EVENT.name} {EVENT.eventTitle} in {EVENT.city} and put your brand in
+            front of Home Service industry owners and executives from day one.
           </p>
           <CtaButton href={LINKS.becomeSponsor} size="lg">
             Become a Sponsor

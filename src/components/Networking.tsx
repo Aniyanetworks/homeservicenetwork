@@ -1,25 +1,35 @@
+import { NETWORKING_AUDIENCE, NETWORKING_HIGHLIGHTS } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
-
-const POINTS = [
-  "Structured networking sessions between speakers",
-  "Lunch designed around conversation, not just food",
-  "A closing reception to keep the conversations going",
-  "A room built entirely of home services owners and leaders",
-];
 
 export default function Networking() {
   return (
     <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <SectionHeading
-            eyebrow="Networking Experience"
-            title="Built for real conversations, not business cards."
-            body="Every part of the day is designed to put you in front of the right people — other owners and leaders solving the same problems you are."
-          />
+        <SectionHeading
+          eyebrow="Business Networking Experience"
+          title="Built for real conversations, not business cards."
+          body="The first part of the evening is dedicated to creating genuine business connections with the people who move the Home Service industry forward."
+        />
 
-          <ul className="grid gap-4">
-            {POINTS.map((point) => (
+        <div className="mt-10 grid gap-10 lg:grid-cols-2">
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-navy-700/60">
+              You&apos;ll have the opportunity to meet
+            </h3>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {NETWORKING_AUDIENCE.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-navy-900/15 bg-navy-950/[0.03] px-4 py-2 text-sm font-semibold text-navy-900"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <ul className="grid gap-3">
+            {NETWORKING_HIGHLIGHTS.map((point) => (
               <li
                 key={point}
                 className="flex items-start gap-3 rounded-xl border border-navy-900/10 bg-navy-950/[0.02] p-4"

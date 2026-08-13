@@ -26,10 +26,14 @@ export default function Hero() {
         </span> */}
 
         <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
-          {EVENT.cityShort} · {EVENT.dateShort}
+          {EVENT.cityShort} · {EVENT.dateShort} · {EVENT.time}
         </span>
 
-        <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+        <span className="mt-6 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-amber-500">
+          {EVENT.eventTitle}
+        </span>
+
+        <h1 className="mt-2 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
           {EVENT.name}
         </h1>
 
@@ -62,6 +66,12 @@ export default function Hero() {
               <path d="M6 2a1 1 0 011 1v1h6V3a1 1 0 112 0v1h1a2 2 0 012 2v11a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h1V3a1 1 0 011-1zm12 6H4v9h14V8z" />
             </svg>
             {EVENT.date}
+          </span>
+          <span className="flex items-center gap-2">
+            <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-brand-amber-500">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13v4.586l3.293 3.293-1.414 1.414L9 10.414V5h2z" />
+            </svg>
+            {EVENT.time}
           </span>
         </div>
       </div>
