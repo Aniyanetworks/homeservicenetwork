@@ -14,7 +14,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
-        <span className="inline-flex items-center rounded-lg bg-white/95 px-4 py-2 shadow-sm">
+        {/* <span className="inline-flex items-center rounded-lg bg-white/95 px-4 py-2 shadow-sm">
           <Image
             src="/logo-trimmed.png"
             alt="Home Service Network TX"
@@ -23,7 +23,7 @@ export default function Hero() {
             priority
             className="h-8 w-auto sm:h-9"
           />
-        </span>
+        </span> */}
 
         <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
           {EVENT.cityShort} · {EVENT.dateShort}

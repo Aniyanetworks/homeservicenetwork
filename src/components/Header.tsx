@@ -13,9 +13,10 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="#top" className="flex items-center">
-          <span className="inline-flex items-center rounded-lg bg-white/95 px-3 py-1.5 shadow-sm">
+          <span className="inline-flex items-center rounded-lg px-3 py-1.5 shadow-sm">
             <Image
-              src="/logo-trimmed.png"
+              src="/logo-trimmed-removebg-preview.png"
+              // src="/logo-trimmed.png"
               alt="Home Service Network TX"
               width={1376}
               height={185}
