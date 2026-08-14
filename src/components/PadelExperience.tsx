@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PADEL_CHALLENGES } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./motion/Reveal";
@@ -11,7 +12,15 @@ export default function PadelExperience() {
           <div className="order-2 lg:order-1">
             <Reveal from="left">
               <HoverLift scale={1.015}>
-                <div className="aspect-[4/3] w-full rounded-2xl border border-white/10 bg-white/5" />
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                  <Image
+                    src="/padel-court.jpg"
+                    alt="Padel court with glass walls"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
               </HoverLift>
             </Reveal>
 

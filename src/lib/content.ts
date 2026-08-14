@@ -26,9 +26,51 @@ export const EVENT = {
   },
 };
 
+// ---- Ticket Pricing Phases ----
+// To switch phases: change CURRENT_PHASE below to "earlyBird" | "finalEarlyBird" | "regular",
+// make sure the matching Stripe Payment Link env var is set on the server (STRIPE_EARLY_BIRD_URL /
+// STRIPE_FINAL_EARLY_BIRD_URL / STRIPE_REGULAR_URL in .env.local and in Netlify), then redeploy.
+// Every price, CTA label, urgency line, and GHL phase tag shown/used on the site updates from
+// this one switch — nothing else needs to change. (The Stripe link itself is looked up
+// server-side in src/lib/ghl.ts, never exposed here, since this file is also used by client
+// components.)
+export const CURRENT_PHASE: "earlyBird" | "finalEarlyBird" | "regular" = "earlyBird";
+
+export const PRICING_PHASES = {
+  earlyBird: {
+    badge: "GRAND OPENING EARLY BIRD",
+    price: 49,
+    regularPrice: 99 as number | null,
+    savings: "SAVE $50" as string | null,
+    urgency: "Limited Early Bird Release" as string | null,
+    ctaLabel: "Get My $49 Ticket",
+    ghlTag: "HSN – $49 Early Bird",
+  },
+  finalEarlyBird: {
+    badge: "FINAL EARLY BIRD",
+    price: 69,
+    regularPrice: 99 as number | null,
+    savings: null as string | null,
+    urgency: "Price increases to $99 on September 4" as string | null,
+    ctaLabel: "Get My $69 Ticket",
+    ghlTag: "HSN – $69 Final Early Bird",
+  },
+  regular: {
+    badge: "GENERAL ADMISSION",
+    price: 99,
+    regularPrice: null as number | null,
+    savings: null as string | null,
+    urgency: null as string | null,
+    ctaLabel: "Get My Ticket",
+    ghlTag: "HSN – $99 General Admission",
+  },
+} as const;
+
+export const PRICING = PRICING_PHASES[CURRENT_PHASE];
+
 export const LINKS = {
-  getTickets: process.env.NEXT_PUBLIC_GHL_TICKETS_URL || "#tickets",
-  becomeSponsor: process.env.NEXT_PUBLIC_GHL_SPONSOR_URL || "#become-sponsor",
+  getTickets: "#tickets",
+  becomeSponsor: "#sponsor",
 };
 
 export const NAV_LINKS = [
@@ -260,15 +302,28 @@ export const AGENDA: AgendaItem[] = [
 export const SPONSOR_TIERS = [
   {
     name: "Presenting Founding Partner",
-    blurb: "The exclusive main sponsor spotlight, including a 10-minute stage presentation to the full room.",
+    blurb:
+      "Our premier Founding Partner with the highest level of visibility and recognition throughout the Grand Opening, including a featured 10-minute stage presentation.",
   },
   {
     name: "Gold Founding Partner",
-    blurb: "Up to 5 minutes on stage to introduce your company and how you support Home Service businesses.",
+    blurb:
+      "Premium event visibility plus up to 5 minutes on stage to introduce your company and connect directly with Home Service business owners and industry leaders.",
   },
-  { name: "Silver Founding Partner", blurb: "Founding Partner recognition on stage during the program." },
-  { name: "Bronze Founding Partner", blurb: "Founding Partner recognition on stage during the program." },
-  { name: "Community Partner", blurb: "Support the Grand Opening and get listed as a community partner." },
+  {
+    name: "Silver Founding Partner",
+    blurb:
+      "Strong brand visibility throughout the event, Founding Partner recognition, and on-stage recognition during the program.",
+  },
+  {
+    name: "Bronze Founding Partner",
+    blurb:
+      "Build brand awareness with the Home Service community through event visibility and official Founding Partner recognition.",
+  },
+  {
+    name: "Community Partner",
+    blurb: "Support the launch of Home Service Network+ and gain visibility as an official Community Partner.",
+  },
 ];
 
 export const FAQS = [

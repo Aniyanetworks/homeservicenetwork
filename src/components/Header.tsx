@@ -49,7 +49,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-white lg:hidden"
         >
           <span className="sr-only">Menu</span>
           {open ? (

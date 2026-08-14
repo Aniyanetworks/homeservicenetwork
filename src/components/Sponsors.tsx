@@ -12,26 +12,24 @@ export default function Sponsors() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
               eyebrow="Founding Partners"
-              title="Backed by the companies launching Home Service Network+."
+              title="The Founding Partners of Home Service Network+"
+              body="Meet the companies helping us launch a new business community built to connect, support, and grow the Home Service industry."
             />
             <CtaButton href={LINKS.becomeSponsor} variant="ghost" size="md" className="shrink-0">
-              Become a Sponsor
+              Become a Founding Partner
             </CtaButton>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {SPONSOR_TIERS.map((tier, i) => (
-            <Reveal key={tier.name} delay={i * 0.06}>
-              <HoverLift>
+            <Reveal key={tier.name} delay={i * 0.06}  className="h-full">
+              <HoverLift className="h-full">
                 <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-navy-950/[0.02] p-6">
                   <span className="text-sm font-extrabold uppercase tracking-wide text-brand-blue-600">
                     {tier.name}
                   </span>
                   <p className="mt-2 text-sm text-navy-700/60">{tier.blurb}</p>
-                  <div className="mt-6 flex h-12 items-center justify-center rounded-lg border border-dashed border-navy-900/15 text-xs font-medium text-navy-700/40">
-                    Logo placeholder
-                  </div>
                 </div>
               </HoverLift>
             </Reveal>

@@ -48,11 +48,11 @@ export default function Countdown() {
   return (
     <div className="flex flex-col gap-2">
       <span className="text-xs font-bold uppercase tracking-widest text-white/50">Doors Open In</span>
-      <div className="flex gap-2 sm:gap-3">
+      <div className="grid grid-cols-4 gap-2 sm:gap-3">
         {units.map((unit) => (
           <div
             key={unit.label}
-            className="flex w-16 flex-col items-center rounded-xl border border-white/10 bg-white/5 py-3 sm:w-20"
+            className="flex w-full flex-col items-center rounded-xl border border-white/10 bg-white/5 py-3"
           >
             <span className="text-2xl font-extrabold tabular-nums text-white sm:text-3xl">
               {String(unit.value).padStart(2, "0")}
