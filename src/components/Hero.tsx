@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { EVENT, LINKS } from "@/lib/content";
 import CtaButton from "./CtaButton";
+import Reveal from "./motion/Reveal";
 
 export default function Hero() {
   return (
@@ -25,34 +26,46 @@ export default function Hero() {
           />
         </span> */}
 
-        <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
-          {EVENT.cityShort} · {EVENT.dateShort} · {EVENT.time}
-        </span>
+        <Reveal>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
+            {EVENT.cityShort} · {EVENT.dateShort} · {EVENT.time}
+          </span>
+        </Reveal>
 
-        <span className="mt-6 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-amber-500">
-          {EVENT.eventTitle}
-        </span>
+        <Reveal delay={0.1}>
+          <span className="mt-6 block text-sm font-extrabold uppercase tracking-[0.2em] text-brand-amber-500">
+            {EVENT.eventTitle}
+          </span>
+        </Reveal>
 
-        <h1 className="mt-2 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
-          {EVENT.name}
-        </h1>
+        <Reveal delay={0.15}>
+          <h1 className="mt-2 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+            {EVENT.name}
+          </h1>
+        </Reveal>
 
-        <p className="mt-5 max-w-2xl text-lg font-medium text-brand-amber-400 sm:text-xl">
-          {EVENT.tagline}
-        </p>
+        <Reveal delay={0.2}>
+          <p className="mt-5 max-w-2xl text-lg font-medium text-brand-amber-400 sm:text-xl">
+            {EVENT.tagline}
+          </p>
+        </Reveal>
 
-        <p className="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
-          {EVENT.subTagline}
-        </p>
+        <Reveal delay={0.25}>
+          <p className="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
+            {EVENT.subTagline}
+          </p>
+        </Reveal>
 
-        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <CtaButton href={LINKS.getTickets} size="lg">
-            Get Tickets
-          </CtaButton>
-          <CtaButton href={LINKS.becomeSponsor} variant="outline" size="lg">
-            Become a Sponsor
-          </CtaButton>
-        </div>
+        <Reveal delay={0.3}>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <CtaButton href={LINKS.getTickets} size="lg">
+              Get Tickets
+            </CtaButton>
+            <CtaButton href={LINKS.becomeSponsor} variant="outline" size="lg">
+              Become a Sponsor
+            </CtaButton>
+          </div>
+        </Reveal>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/10 pt-6 text-sm text-white/60">
           <span className="flex items-center gap-2">

@@ -102,8 +102,9 @@ export const PADEL_CHALLENGES = [
 export const FEATURED_SPEAKER = {
   name: "Sean Michael Crane",
   title: "Featured Keynote Speaker",
-  bio: "A powerful one-hour keynote on Leadership, Discipline, Mindset, Business, and Personal Growth — the centerpiece presentation of the Home Service Network+ Grand Opening.",
-  photo: null as string | null,
+  tagline: "From Prison to Purpose. From Adversity to an Unstoppable Life.",
+  bio: "Entrepreneur, keynote speaker, coach, and founder of Unstoppable 365, Sean Michael Crane transformed his life through discipline, mindset, and relentless personal accountability. At the Home Service Network+ Grand Opening, Sean will deliver a powerful one-hour keynote focused on leadership, discipline, mindset, business, and personal growth — with lessons designed to challenge business owners and leaders to raise their standards and take action.",
+  photo: "/sean-michael-crane.jpeg" as string | null,
 };
 
 type AgendaItem = {
