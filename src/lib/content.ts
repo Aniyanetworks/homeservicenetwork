@@ -17,6 +17,7 @@ export const EVENT = {
   date: "September 12, 2026",
   dateShort: "Sept 12, 2026",
   dateISO: "2026-09-12",
+  eventDateTime: "2026-09-12T16:00:00-05:00",
   time: "4:00 PM – 11:00 PM",
   venue: "Venue to be announced",
   founder: {

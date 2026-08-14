@@ -15,7 +15,7 @@ export default function WhatIsHsn() {
     <section id="about" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <Reveal>
+          <Reveal from="left">
             <SectionHeading
               eyebrow={`What is ${EVENT.name}?`}
               title={`${EVENT.name} is a business community for home services leaders.`}
@@ -25,7 +25,7 @@ export default function WhatIsHsn() {
 
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             {STATS.map((item, i) => (
-              <Reveal key={item.label} delay={i * 0.08}>
+              <Reveal key={item.label} from="right" delay={i * 0.08}>
                 <HoverLift>
                   <div className="rounded-2xl border border-navy-900/10 bg-navy-950/[0.02] p-6 text-center">
                     <div className="text-3xl font-extrabold text-navy-950 sm:text-4xl">

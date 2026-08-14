@@ -12,8 +12,8 @@ export default function FeaturedSpeaker() {
           <SectionHeading eyebrow="Featured Speaker" title="Taking the main stage." dark />
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mt-12 flex flex-col items-center gap-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-10 lg:flex-row lg:items-start">
+        <div className="mt-12 flex flex-col items-center gap-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-10 lg:flex-row lg:items-start">
+          <Reveal from="left" delay={0.1}>
             <HoverLift className="shrink-0">
               <div className="relative h-40 w-40 overflow-hidden rounded-2xl bg-white/10 sm:h-48 sm:w-48">
                 {FEATURED_SPEAKER.photo ? (
@@ -30,7 +30,9 @@ export default function FeaturedSpeaker() {
                 )}
               </div>
             </HoverLift>
+          </Reveal>
 
+          <Reveal from="right" delay={0.15}>
             <div className="text-center lg:text-left">
               <h3 className="text-2xl font-extrabold sm:text-3xl">{FEATURED_SPEAKER.name}</h3>
               <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-brand-amber-400">
@@ -41,8 +43,8 @@ export default function FeaturedSpeaker() {
               </p>
               <p className="mt-4 max-w-xl text-white/70">{FEATURED_SPEAKER.bio}</p>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

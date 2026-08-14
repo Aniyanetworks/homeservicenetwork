@@ -9,13 +9,13 @@ export default function PadelExperience() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
-            <Reveal>
+            <Reveal from="left">
               <HoverLift scale={1.015}>
                 <div className="aspect-[4/3] w-full rounded-2xl border border-white/10 bg-white/5" />
               </HoverLift>
             </Reveal>
 
-            <Reveal delay={0.1}>
+            <Reveal from="left" delay={0.1}>
               <div className="mt-6">
                 <h3 className="text-sm font-bold uppercase tracking-wide text-white/50">
                   Padel Challenges &amp; Games
@@ -38,7 +38,7 @@ export default function PadelExperience() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.15} className="order-1 lg:order-2">
+          <Reveal from="right" delay={0.15} className="order-1 lg:order-2">
             <SectionHeading
               eyebrow="Padel Experience"
               title="Compete, connect, and have a little fun."

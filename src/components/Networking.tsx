@@ -15,7 +15,7 @@ export default function Networking() {
         </Reveal>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2">
-          <Reveal delay={0.1}>
+          <Reveal from="left">
             <div>
               <h3 className="text-sm font-bold uppercase tracking-wide text-navy-700/60">
                 You&apos;ll have the opportunity to meet
@@ -33,7 +33,7 @@ export default function Networking() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2}>
+          <Reveal from="right">
             <ul className="grid gap-3">
               {NETWORKING_HIGHLIGHTS.map((point) => (
                 <li

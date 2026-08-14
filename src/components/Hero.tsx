@@ -1,18 +1,15 @@
 import Image from "next/image";
-import { EVENT, LINKS } from "@/lib/content";
+import Link from "next/link";
+import { EVENT, FEATURED_SPEAKER, LINKS } from "@/lib/content";
 import CtaButton from "./CtaButton";
+import Countdown from "./Countdown";
+import HeroBackground from "./HeroBackground";
 import Reveal from "./motion/Reveal";
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-navy-950 text-white">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(23,166,163,0.35), transparent 45%), radial-gradient(circle at 80% 0%, rgba(226,103,46,0.25), transparent 40%)",
-        }}
-      />
+      <HeroBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
         {/* <span className="inline-flex items-center rounded-lg bg-white/95 px-4 py-2 shadow-sm">
@@ -26,11 +23,11 @@ export default function Hero() {
           />
         </span> */}
 
-        <Reveal>
+        {/* <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
             {EVENT.cityShort} · {EVENT.dateShort} · {EVENT.time}
           </span>
-        </Reveal>
+        </Reveal> */}
 
         <Reveal delay={0.1}>
           <span className="mt-6 block text-sm font-extrabold uppercase tracking-[0.2em] text-brand-amber-500">
@@ -57,7 +54,13 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8">
+            <Countdown />
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.35}>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CtaButton href={LINKS.getTickets} size="lg">
               Get Tickets
             </CtaButton>
@@ -66,6 +69,28 @@ export default function Hero() {
             </CtaButton>
           </div>
         </Reveal>
+
+        {FEATURED_SPEAKER.photo && (
+          <Reveal delay={0.4}>
+            <Link
+              href="#speaker"
+              className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 py-1.5 pl-1.5 pr-4 transition-colors duration-200 hover:bg-white/10"
+            >
+              <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full">
+                <Image
+                  src={FEATURED_SPEAKER.photo}
+                  alt={FEATURED_SPEAKER.name}
+                  fill
+                  className="object-cover"
+                />
+              </span>
+              <span className="text-xs font-semibold text-white/80 sm:text-sm">
+                Featuring Keynote{" "}
+                <span className="text-brand-amber-400">{FEATURED_SPEAKER.name}</span>
+              </span>
+            </Link>
+          </Reveal>
+        )}
 
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/10 pt-6 text-sm text-white/60">
           <span className="flex items-center gap-2">
