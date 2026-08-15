@@ -10,6 +10,7 @@ import Agenda from "@/components/Agenda";
 import Sponsors from "@/components/Sponsors";
 import TicketSelection from "@/components/TicketSelection";
 import BecomeSponsor from "@/components/BecomeSponsor";
+import VipRegistration from "@/components/VipRegistration";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
@@ -29,6 +30,7 @@ export default function Home() {
         <Sponsors />
         <TicketSelection />
         <BecomeSponsor />
+        <VipRegistration />
         <Faq />
       </main>
       <Footer />

@@ -26,6 +26,12 @@ export const EVENT = {
   },
 };
 
+export const LINKS = {
+  getTickets: process.env.NEXT_PUBLIC_GHL_TICKETS_URL || "#tickets",
+  becomeSponsor: "#sponsor",
+  vipRegistration: "https://api.leadconnectorhq.com/widget/form/NflowB1uYzdAU0LGKi5x",
+};
+
 // ---- Ticket Pricing Phases ----
 // To switch phases: change CURRENT_PHASE below to "earlyBird" | "finalEarlyBird" | "regular",
 // make sure the matching Stripe Payment Link env var is set on the server (STRIPE_EARLY_BIRD_URL /
@@ -68,10 +74,6 @@ export const PRICING_PHASES = {
 
 export const PRICING = PRICING_PHASES[CURRENT_PHASE];
 
-export const LINKS = {
-  getTickets: "#tickets",
-  becomeSponsor: "#sponsor",
-};
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },

@@ -1,8 +1,9 @@
-import { EVENT } from "@/lib/content";
+import { EVENT, LINKS } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 import PricingBadge from "./PricingBadge";
 import TicketForm from "./TicketForm";
 import Reveal from "./motion/Reveal";
+import CtaButton from "./CtaButton";
 
 export default function TicketSelection() {
   return (
@@ -24,10 +25,15 @@ export default function TicketSelection() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.2}>
+        {/* <Reveal delay={0.2}>
           <div className="mt-8 text-left">
             <TicketForm />
           </div>
+        </Reveal> */}
+        <Reveal delay={0.2}>
+          <CtaButton href={LINKS.getTickets} size="lg" className="mt-8">
+            Get Tickets Now
+          </CtaButton>
         </Reveal>
       </div>
     </section>
