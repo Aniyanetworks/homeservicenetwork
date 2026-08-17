@@ -28,7 +28,7 @@ export const EVENT = {
 
 export const LINKS = {
   getTickets: process.env.NEXT_PUBLIC_GHL_TICKETS_URL || "#tickets",
-  becomeSponsor: "#sponsor",
+  becomeSponsor: "/sponsorship",
   vipRegistration: "https://api.leadconnectorhq.com/widget/form/NflowB1uYzdAU0LGKi5x",
 };
 
@@ -81,6 +81,7 @@ export const NAV_LINKS = [
   { label: "Speaker", href: "#speaker" },
   { label: "Agenda", href: "#agenda" },
   { label: "Sponsors", href: "#sponsors" },
+  // { label: "Sponsorship", href: "/sponsorship" },
   { label: "Tickets", href: "#tickets" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -304,27 +305,71 @@ export const AGENDA: AgendaItem[] = [
 export const SPONSOR_TIERS = [
   {
     name: "Presenting Founding Partner",
+    price: "$5,000",
     blurb:
       "Our premier Founding Partner with the highest level of visibility and recognition throughout the Grand Opening, including a featured 10-minute stage presentation.",
+    perks: [
+      "30 VIP Guest Passes for the September 12 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+    ],
   },
   {
     name: "Gold Founding Partner",
+    price: "$2,500",
     blurb:
       "Premium event visibility plus up to 5 minutes on stage to introduce your company and connect directly with Home Service business owners and industry leaders.",
+    perks: [
+      "20 VIP Guest Passes for the September 12 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+    ],
   },
   {
     name: "Silver Founding Partner",
+    price: "$1,500",
     blurb:
       "Strong brand visibility throughout the event, Founding Partner recognition, and on-stage recognition during the program.",
+    perks: [
+      "10 VIP Guest Passes for the September 12 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+    ],
   },
   {
     name: "Bronze Founding Partner",
+    price: "$700",
     blurb:
       "Build brand awareness with the Home Service community through event visibility and official Founding Partner recognition.",
+    perks: [
+      "4 General Admission Tickets for the September 12 Grand Opening",
+      "Does not include the VIP Sponsor Dinner",
+    ],
   },
   {
     name: "Community Partner",
+    price: null as string | null,
     blurb: "Support the launch of Home Service Network+ and gain visibility as an official Community Partner.",
+    perks: [] as string[],
+  },
+];
+
+// The private sponsor dinner is a separate, exclusive benefit from the VIP Guest Passes —
+// it is NOT included with attendee/VIP tickets and sponsors cannot use their guest passes
+// to bring additional people to it. Keep this distinction explicit everywhere it's shown.
+export const SPONSOR_DINNER = {
+  eyebrow: "Exclusive Founding Partner Experience",
+  title: "Private Sponsor Dinner & Networking with Sean Michael Crane",
+  dateLabel: "September 11 • 7:00 PM",
+  body: "An exclusive private evening bringing select Home Service Network+ Founding Partners together with Sean Michael Crane for dinner, conversation, and high-level networking before the Grand Opening.",
+  note: "Available exclusively to qualifying Founding Partner sponsors. No additional guests.",
+};
+
+export const SPONSOR_CLARITY = [
+  {
+    label: "VIP Guest Passes",
+    detail: `${EVENT.eventTitle} — September 12`,
+  },
+  {
+    label: "VIP Sponsor Dinner",
+    detail: "Private sponsor experience — September 11",
   },
 ];
 
@@ -351,7 +396,7 @@ export const FAQS = [
   },
   {
     q: "How do I become a sponsor?",
-    a: "Use the \"Become a Sponsor\" button anywhere on this page to submit your application and become a Founding Partner.",
+    a: "Use the \"Become a Founding Partner\" button to view sponsorship packages and submit your application.",
   },
   {
     q: "What should I bring?",

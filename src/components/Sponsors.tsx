@@ -26,9 +26,14 @@ export default function Sponsors() {
             <Reveal key={tier.name} delay={i * 0.06}  className="h-full">
               <HoverLift className="h-full">
                 <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-navy-950/[0.02] p-6">
-                  <span className="text-sm font-extrabold uppercase tracking-wide text-brand-blue-600">
-                    {tier.name}
-                  </span>
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="text-sm font-extrabold uppercase tracking-wide text-brand-blue-600">
+                      {tier.name}
+                    </span>
+                    {tier.price && (
+                      <span className="shrink-0 text-sm font-extrabold text-navy-950">{tier.price}</span>
+                    )}
+                  </div>
                   <p className="mt-2 text-sm text-navy-700/60">{tier.blurb}</p>
                 </div>
               </HoverLift>

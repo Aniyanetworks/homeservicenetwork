@@ -1,12 +1,12 @@
-import { EVENT } from "@/lib/content";
+import { EVENT, LINKS } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
-import SponsorForm from "./SponsorForm";
+import CtaButton from "./CtaButton";
 import Reveal from "./motion/Reveal";
 
 export default function BecomeSponsor() {
   return (
     <section id="sponsor" className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
             eyebrow="Become a Founding Partner"
@@ -17,9 +17,9 @@ export default function BecomeSponsor() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="mt-10 text-left">
-            <SponsorForm />
-          </div>
+          <CtaButton href={LINKS.becomeSponsor} size="lg" className="mt-8">
+            Become a Founding Partner
+          </CtaButton>
         </Reveal>
       </div>
     </section>
