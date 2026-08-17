@@ -80,7 +80,7 @@ export const NAV_LINKS = [
   { label: "Why Attend", href: "#why-attend" },
   { label: "Speaker", href: "#speaker" },
   { label: "Agenda", href: "#agenda" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "Sponsors", href: "/sponsorship" },
   // { label: "Sponsorship", href: "/sponsorship" },
   { label: "Tickets", href: "#tickets" },
   { label: "FAQ", href: "#faq" },
