@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0b1424;
+  --foreground: #0a0a0d;
 }
 
 @theme inline {
@@ -11,17 +11,20 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-navy-950: #071414;
-  --color-navy-900: #0b1f1f;
-  --color-navy-800: #123030;
-  --color-navy-700: #1b4343;
+  /* Black/blue palette matched to the Home Service Network logo (black + royal blue + white). */
+  --color-navy-950: #000000;
+  --color-navy-900: #0d0e13;
+  --color-navy-800: #17181f;
+  --color-navy-700: #383b4a;
 
-  --color-brand-blue-500: #17a6a3;
-  --color-brand-blue-600: #0f8b89;
+  /* Deep logo blue — accent text/borders on white backgrounds. */
+  --color-brand-blue-500: #143ff2;
+  --color-brand-blue-600: #0c2fc2;
 
-  --color-brand-amber-400: #f0895c;
-  --color-brand-amber-500: #e2672e;
-  --color-brand-amber-600: #c1541f;
+  /* Brighter blue tint — accent/CTA punch color on black backgrounds. */
+  --color-brand-amber-400: #7da3ff;
+  --color-brand-amber-500: #4c7dff;
+  --color-brand-amber-600: #2a57e0;
 }
 
 body {

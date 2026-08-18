@@ -26,12 +26,11 @@ export default function Footer() {
         <div className="mt-16 flex flex-col items-center gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <span className="inline-flex items-center rounded-lg  px-3 py-1.5 shadow-sm">
             <Image
-              src="/logo-trimmed-removebg-preview.png"
-              // src="/logo-trimmed.png"
-              alt="Home Service Network TX"
-              width={1376}
-              height={185}
-              className="h-6 w-auto sm:h-7"
+              src="/home-service-network-logo.png"
+              alt="Home Service Network"
+              width={747}
+              height={337}
+              className="h-8 w-auto sm:h-9"
             />
           </span>
 
