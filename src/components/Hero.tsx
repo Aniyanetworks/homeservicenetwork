@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { EVENT, FEATURED_SPEAKER, LINKS } from "@/lib/content";
+import { EVENT, FEATURED_SPEAKER, LINKS, PRICING } from "@/lib/content";
 import CtaButton from "./CtaButton";
 import Countdown from "./Countdown";
 import HeroBackground from "./HeroBackground";
@@ -72,7 +72,7 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <CtaButton href={LINKS.getTickets} size="md">
-                Get Tickets
+                {PRICING.ctaLabel}
               </CtaButton>
               <CtaButton href={LINKS.becomeSponsor} variant="outline" size="md">
                 Become a Sponsor
