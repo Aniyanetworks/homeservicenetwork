@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import WhatIsHsn from "@/components/WhatIsHsn";
 import WhyAttend from "@/components/WhyAttend";
-import WhoShouldAttend from "@/components/WhoShouldAttend";
+import WhatsIncluded from "@/components/WhatsIncluded";
+// import WhoShouldAttend from "@/components/WhoShouldAttend";
 import FeaturedSpeaker from "@/components/FeaturedSpeaker";
 import Networking from "@/components/Networking";
-import PadelExperience from "@/components/PadelExperience";
+// import PadelExperience from "@/components/PadelExperience";
 import Agenda from "@/components/Agenda";
 import Sponsors from "@/components/Sponsors";
 import TicketSelection from "@/components/TicketSelection";
@@ -20,15 +20,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <WhatIsHsn />
         <WhyAttend />
-        <WhoShouldAttend />
+        <WhatsIncluded />
+        {/* <WhoShouldAttend /> */}
         <FeaturedSpeaker />
         <Networking />
-        <PadelExperience />
+        {/* <PadelExperience /> */}
         <Agenda />
-        <Sponsors />
         <TicketSelection />
+        <Sponsors />
         <BecomeSponsor />
         <VipRegistration />
         <Faq />

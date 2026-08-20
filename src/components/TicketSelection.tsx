@@ -1,4 +1,4 @@
-import { EVENT, LINKS } from "@/lib/content";
+import { EVENT, LINKS, TICKET_INCLUDES_LINE } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 import PricingBadge from "./PricingBadge";
 import TicketForm from "./TicketForm";
@@ -23,6 +23,10 @@ export default function TicketSelection() {
           <div className="mt-8 flex justify-center">
             <PricingBadge />
           </div>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <p className="mt-4 text-sm font-medium text-white/60">{TICKET_INCLUDES_LINE}</p>
         </Reveal>
 
         {/* <Reveal delay={0.2}>

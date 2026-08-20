@@ -76,7 +76,6 @@ export const PRICING = PRICING_PHASES[CURRENT_PHASE];
 
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
   { label: "Why Attend", href: "#why-attend" },
   { label: "Speaker", href: "#speaker" },
   { label: "Agenda", href: "#agenda" },
@@ -115,6 +114,20 @@ export const WHY_ATTEND = [
     body: "Home Service Network+ is built to be a relationship, not a one-night event.",
   },
 ];
+
+export const FOOD_AND_DRINKS = {
+  title: "Food, Drinks & Networking",
+  body: "Enjoy great food, refreshing drinks, and dedicated networking time with Home Service business owners, industry leaders, and partners.",
+  includes: [
+    "Food during the event",
+    "Beer, wine & non-alcoholic beverages",
+    "Dedicated networking time",
+    "Opportunities to connect with contractors, suppliers & industry leaders",
+  ],
+  tagline: "Come hungry. Leave connected.",
+};
+
+export const TICKET_INCLUDES_LINE = "Admission includes food, drinks, keynote & networking.";
 
 export const NETWORKING_AUDIENCE = [
   "Home Service business owners",
