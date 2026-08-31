@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { PRICING } from "@/lib/content";
+import Link from "next/link";
+import { LINKS, PRICING } from "@/lib/content";
 
 const inputClass =
   "w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-brand-amber-500 focus:outline-none focus:ring-1 focus:ring-brand-amber-500";
@@ -14,10 +15,18 @@ export default function TicketForm() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus("error");
+      setError("Please fill out all required fields before submitting.");
+      return;
+    }
+
     setStatus("submitting");
     setError("");
 
-    const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
@@ -43,6 +52,7 @@ export default function TicketForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      noValidate
       className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8"
     >
       <div className="grid gap-4 sm:grid-cols-2">
@@ -121,6 +131,30 @@ export default function TicketForm() {
         </p>
       )}
 
+      <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-white/5 p-4">
+        <label className="flex items-start gap-3 text-xs leading-relaxed text-white/60">
+          <input
+            type="checkbox"
+            name="smsMarketingConsent"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-brand-amber-500"
+          />
+          I consent to receive marketing text messages about ticket promotions, sponsorship offers, and
+          Home Service Network+ updates from Home Service Network+ at the phone number provided. Message
+          frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to
+          opt out.
+        </label>
+        <label className="flex items-start gap-3 text-xs leading-relaxed text-white/60">
+          <input
+            type="checkbox"
+            name="smsTransactionalConsent"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-brand-amber-500"
+          />
+          I consent to receive non-marketing text messages from Home Service Network+ about my ticket
+          confirmation, event reminders, and event-day updates. Message frequency may vary, message &amp;
+          data rates may apply. Text HELP for assistance, reply STOP to opt out.
+        </label>
+      </div>
+
       <button
         type="submit"
         disabled={status === "submitting" || status === "redirected"}
@@ -131,6 +165,16 @@ export default function TicketForm() {
 
       <p className="text-center text-xs text-white/40">
         You&apos;ll be redirected to our secure Stripe checkout in a new tab to complete payment.
+      </p>
+
+      <p className="text-center text-xs text-white/40">
+        <Link href={LINKS.privacyPolicy} className="text-brand-amber-400 hover:underline">
+          Privacy Policy
+        </Link>{" "}
+        |{" "}
+        <Link href={LINKS.terms} className="text-brand-amber-400 hover:underline">
+          Terms of Service
+        </Link>
       </p>
     </form>
   );

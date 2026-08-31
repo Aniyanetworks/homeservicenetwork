@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
+import { LINKS } from "@/lib/content";
 
 const inputClass =
   "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-2.5 text-sm text-navy-950 placeholder:text-navy-700/40 focus:border-brand-blue-600 focus:outline-none focus:ring-1 focus:ring-brand-blue-600";
@@ -13,10 +15,18 @@ export default function SponsorForm() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus("error");
+      setError("Please fill out all required fields before submitting.");
+      return;
+    }
+
     setStatus("submitting");
     setError("");
 
-    const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
@@ -53,6 +63,7 @@ export default function SponsorForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      noValidate
       className="grid gap-4 rounded-2xl border border-navy-900/10 bg-navy-950/[0.02] p-6 sm:p-8"
     >
       <div className="grid gap-4 sm:grid-cols-2">
@@ -134,6 +145,30 @@ export default function SponsorForm() {
         <p className="rounded-lg bg-red-500/10 px-4 py-2.5 text-sm text-red-600">{error}</p>
       )}
 
+      <div className="flex flex-col gap-3 rounded-lg border border-navy-900/10 bg-white p-4">
+        <label className="flex items-start gap-3 text-sm leading-relaxed text-navy-700/70">
+          <input
+            type="checkbox"
+            name="smsMarketingConsent"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-brand-blue-600"
+          />
+          I consent to receive marketing text messages about ticket promotions, sponsorship offers, and
+          Home Service Network+ updates from Home Service Network+ at the phone number provided. Message
+          frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to
+          opt out.
+        </label>
+        <label className="flex items-start gap-3 text-sm leading-relaxed text-navy-700/70">
+          <input
+            type="checkbox"
+            name="smsTransactionalConsent"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-brand-blue-600"
+          />
+          I consent to receive non-marketing text messages from Home Service Network+ about my
+          application, event reminders, and event-day updates. Message frequency may vary, message &amp;
+          data rates may apply. Text HELP for assistance, reply STOP to opt out.
+        </label>
+      </div>
+
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -141,6 +176,16 @@ export default function SponsorForm() {
       >
         {status === "submitting" ? "Submitting..." : "Submit Application"}
       </button>
+
+      <p className="text-center text-sm text-navy-700/50">
+        <Link href={LINKS.privacyPolicy} className="text-brand-blue-600 hover:underline">
+          Privacy Policy
+        </Link>{" "}
+        |{" "}
+        <Link href={LINKS.terms} className="text-brand-blue-600 hover:underline">
+          Terms of Service
+        </Link>
+      </p>
     </form>
   );
 }

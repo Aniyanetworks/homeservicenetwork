@@ -50,6 +50,15 @@ export default function Footer() {
             © {new Date().getFullYear()} {EVENT.name}. All rights reserved.
           </span>
         </div>
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-t border-white/10 pt-6">
+          <Link href={LINKS.privacyPolicy} className="text-xs text-white/40 hover:text-white/70">
+            Privacy Policy
+          </Link>
+          <Link href={LINKS.terms} className="text-xs text-white/40 hover:text-white/70">
+            Terms of Service
+          </Link>
+        </div>
       </div>
 
       <div className="border-t border-white/10 bg-navy-900 py-4">

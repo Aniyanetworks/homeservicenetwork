@@ -30,6 +30,20 @@ export const LINKS = {
   getTickets: process.env.NEXT_PUBLIC_GHL_TICKETS_URL || "#tickets",
   becomeSponsor: "/sponsorship",
   vipRegistration: "https://api.leadconnectorhq.com/widget/form/NflowB1uYzdAU0LGKi5x",
+  privacyPolicy: "/privacy-policy",
+  terms: "/terms",
+};
+
+// Left blank until real values are provided — the Privacy Policy and Terms
+// pages only render a line if its value here is non-empty, so nothing shows
+// as a placeholder on the live site. TCPA/A2P registration expects a real,
+// verifiable business address and contact, so fill these in before relying
+// on them for compliance.
+export const BUSINESS = {
+  legalName: "Home Service Network+",
+  mailingAddress: "",
+  supportEmail: "support@homeservicenetworktx.com",
+  supportPhone: "",
 };
 
 // ---- Ticket Pricing Phases ----
