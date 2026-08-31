@@ -153,7 +153,7 @@ export default function SponsorForm() {
             className="mt-0.5 h-4 w-4 shrink-0 accent-brand-blue-600"
           />
           I consent to receive marketing text messages about ticket promotions, sponsorship offers, and
-          Home Service Network+ updates from Home Service Network+ at the phone number provided. Message
+          Home Service Network TX updates from Home Service Network TX at the phone number provided. Message
           frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to
           opt out.
         </label>
@@ -163,7 +163,7 @@ export default function SponsorForm() {
             name="smsTransactionalConsent"
             className="mt-0.5 h-4 w-4 shrink-0 accent-brand-blue-600"
           />
-          I consent to receive non-marketing text messages from Home Service Network+ about my
+          I consent to receive non-marketing text messages from Home Service Network TX about my
           application, event reminders, and event-day updates. Message frequency may vary, message &amp;
           data rates may apply. Text HELP for assistance, reply STOP to opt out.
         </label>

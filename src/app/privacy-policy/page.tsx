@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
                 <li>• Process ticket registrations and sponsorship applications</li>
                 <li>• Send confirmations, event updates, and reminders by email and SMS</li>
                 <li>• Respond to questions and provide event-day support</li>
-                <li>• Improve this website and future Home Service Network+ events</li>
+                <li>• Improve this website and future Home Service Network TX events</li>
               </ul>
             </section>
 

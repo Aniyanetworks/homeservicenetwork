@@ -29,7 +29,7 @@ export default function SponsorshipPage() {
             <Reveal>
               <SectionHeading
                 eyebrow="Founding Partners"
-                title="The Founding Partners of Home Service Network+"
+                title="The Founding Partners of Home Service Network TX"
                 body="Meet the sponsorship packages helping us launch a new business community built to connect, support, and grow the Home Service industry."
                 align="center"
               />

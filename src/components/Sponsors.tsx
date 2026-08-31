@@ -12,7 +12,7 @@ export default function Sponsors() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
               eyebrow="Founding Partners"
-              title="The Founding Partners of Home Service Network+"
+              title="The Founding Partners of Home Service Network TX"
               body="Meet the companies helping us launch a new business community built to connect, support, and grow the Home Service industry."
             />
             <CtaButton href={LINKS.becomeSponsor} variant="ghost" size="md" className="shrink-0">

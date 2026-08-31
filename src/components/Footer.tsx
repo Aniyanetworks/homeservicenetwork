@@ -27,7 +27,7 @@ export default function Footer() {
           <span className="inline-flex items-center rounded-lg  px-3 py-1.5 shadow-sm">
             <Image
               src="/home-service-network-logo.png"
-              alt="Home Service Network"
+              alt="Home Service Network TX"
               width={747}
               height={337}
               className="h-8 w-auto sm:h-9"

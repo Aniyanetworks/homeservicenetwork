@@ -4,12 +4,12 @@
 // content meant to be edited directly.
 
 export const EVENT = {
-  name: "Home Service Network+",
-  shortName: "HSN+",
+  name: "Home Service Network TX",
+  shortName: "HSN TX",
   eventTitle: "Grand Opening",
   tagline: "Connect • Learn • Build Relationships • Have Fun",
   subTagline:
-    "The official Grand Opening of Home Service Network+ — an evening of business connections, Padel, and community for Home Service industry leaders in Austin, Texas.",
+    "The official Grand Opening of Home Service Network TX — an evening of business connections, Padel, and community for Home Service industry leaders in Austin, Texas.",
   closingHeadline: "One Night. Hundreds Of Connections. The Beginning Of A Community.",
   closingBody: "Where the Home Service industry comes together to connect, grow, and build relationships.",
   city: "Austin, Texas",
@@ -22,7 +22,7 @@ export const EVENT = {
   venue: "Venue to be announced",
   founder: {
     name: "Isael Garcia",
-    title: "Founder, Home Service Network+",
+    title: "Founder, Home Service Network TX",
   },
 };
 
@@ -40,7 +40,7 @@ export const LINKS = {
 // verifiable business address and contact, so fill these in before relying
 // on them for compliance.
 export const BUSINESS = {
-  legalName: "Home Service Network+",
+  legalName: "Home Service Network TX",
   mailingAddress: "",
   supportEmail: "support@homeservicenetworktx.com",
   supportPhone: "",
@@ -125,7 +125,7 @@ export const WHY_ATTEND = [
   },
   {
     title: "Community That Lasts",
-    body: "Home Service Network+ is built to be a relationship, not a one-night event.",
+    body: "Home Service Network TX is built to be a relationship, not a one-night event.",
   },
 ];
 
@@ -176,7 +176,7 @@ export const FEATURED_SPEAKER = {
   name: "Sean Michael Crane",
   title: "Featured Keynote Speaker",
   tagline: "From Prison to Purpose. From Adversity to an Unstoppable Life.",
-  bio: "Entrepreneur, keynote speaker, coach, and founder of Unstoppable 365, Sean Michael Crane transformed his life through discipline, mindset, and relentless personal accountability. At the Home Service Network+ Grand Opening, Sean will deliver a powerful one-hour keynote focused on leadership, discipline, mindset, business, and personal growth — with lessons designed to challenge business owners and leaders to raise their standards and take action.",
+  bio: "Entrepreneur, keynote speaker, coach, and founder of Unstoppable 365, Sean Michael Crane transformed his life through discipline, mindset, and relentless personal accountability. At the Home Service Network TX Grand Opening, Sean will deliver a powerful one-hour keynote focused on leadership, discipline, mindset, business, and personal growth — with lessons designed to challenge business owners and leaders to raise their standards and take action.",
   photo: "/sean-michael-crane.jpeg" as string | null,
 };
 
@@ -193,7 +193,7 @@ export const AGENDA: AgendaItem[] = [
   {
     time: "4:00 PM – 4:30 PM",
     title: "Arrival • Check-In • Welcome",
-    subtitle: "The Home Service Network+ Grand Opening officially begins.",
+    subtitle: "The Home Service Network TX Grand Opening officially begins.",
     bullets: [
       "Guest and VIP check-in",
       "Welcome drinks",
@@ -216,7 +216,7 @@ export const AGENDA: AgendaItem[] = [
     subtitle: `${EVENT.founder.name} — ${EVENT.founder.title}`,
     sectionLabel: "Main Program",
     bullets: [
-      "Why Home Service Network+ was created",
+      "Why Home Service Network TX was created",
       "The vision for building the Home Service business community",
       "Recognition of Founding Partners",
       "Introduction to the evening program",
@@ -276,7 +276,7 @@ export const AGENDA: AgendaItem[] = [
     subtitle: "Leadership • Discipline • Mindset • Business • Personal Growth",
     featured: true,
     bullets: [
-      "The centerpiece presentation of the Home Service Network+ Grand Opening",
+      "The centerpiece presentation of the Home Service Network TX Grand Opening",
       "Networking activities and games pause so attendees can participate in the full experience",
     ],
   },
@@ -286,7 +286,7 @@ export const AGENDA: AgendaItem[] = [
     bullets: [
       `Thank you and recognition for ${FEATURED_SPEAKER.name}`,
       "Founding Partner recognition",
-      "Official Home Service Network+ group photo",
+      "Official Home Service Network TX group photo",
       "Announcement of evening prizes and activities",
     ],
   },
@@ -324,7 +324,7 @@ export const AGENDA: AgendaItem[] = [
       "Thank you to Founding Partners",
       "Final sponsor recognition",
       "Community vision",
-      "Announcement of what's next for Home Service Network+",
+      "Announcement of what's next for Home Service Network TX",
     ],
   },
 ];
@@ -373,7 +373,7 @@ export const SPONSOR_TIERS = [
   {
     name: "Community Partner",
     price: null as string | null,
-    blurb: "Support the launch of Home Service Network+ and gain visibility as an official Community Partner.",
+    blurb: "Support the launch of Home Service Network TX and gain visibility as an official Community Partner.",
     perks: [] as string[],
   },
 ];
@@ -385,7 +385,7 @@ export const SPONSOR_DINNER = {
   eyebrow: "Exclusive Founding Partner Experience",
   title: "Private Sponsor Dinner & Networking with Sean Michael Crane",
   dateLabel: "September 11 • 7:00 PM",
-  body: "An exclusive private evening bringing select Home Service Network+ Founding Partners together with Sean Michael Crane for dinner, conversation, and high-level networking before the Grand Opening.",
+  body: "An exclusive private evening bringing select Home Service Network TX Founding Partners together with Sean Michael Crane for dinner, conversation, and high-level networking before the Grand Opening.",
   note: "Available exclusively to qualifying Founding Partner sponsors. No additional guests.",
 };
 
