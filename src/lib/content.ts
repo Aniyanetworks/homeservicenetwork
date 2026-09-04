@@ -14,10 +14,10 @@ export const EVENT = {
   closingBody: "Where the Home Service industry comes together to connect, grow, and build relationships.",
   city: "Austin, Texas",
   cityShort: "Austin, TX",
-  date: "September 12, 2026",
-  dateShort: "Sept 12, 2026",
-  dateISO: "2026-09-12",
-  eventDateTime: "2026-09-12T16:00:00-05:00",
+  date: "November 13, 2026",
+  dateShort: "Nov 13, 2026",
+  dateISO: "2026-11-13",
+  eventDateTime: "2026-11-13T16:00:00-06:00",
   time: "4:00 PM – 11:00 PM",
   venue: "Venue to be announced",
   founder: {
@@ -336,8 +336,8 @@ export const SPONSOR_TIERS = [
     blurb:
       "Our premier Founding Partner with the highest level of visibility and recognition throughout the Grand Opening, including a featured 10-minute stage presentation.",
     perks: [
-      "30 VIP Guest Passes for the September 12 Grand Opening",
-      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+      "30 VIP Guest Passes for the November 13 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — November 12 at 7:00 PM",
     ],
   },
   {
@@ -346,8 +346,8 @@ export const SPONSOR_TIERS = [
     blurb:
       "Premium event visibility plus up to 5 minutes on stage to introduce your company and connect directly with Home Service business owners and industry leaders.",
     perks: [
-      "20 VIP Guest Passes for the September 12 Grand Opening",
-      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+      "20 VIP Guest Passes for the November 13 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — November 12 at 7:00 PM",
     ],
   },
   {
@@ -356,8 +356,8 @@ export const SPONSOR_TIERS = [
     blurb:
       "Strong brand visibility throughout the event, Founding Partner recognition, and on-stage recognition during the program.",
     perks: [
-      "10 VIP Guest Passes for the September 12 Grand Opening",
-      "VIP Sponsor Dinner & Networking with Sean Michael Crane — September 11 at 7:00 PM",
+      "10 VIP Guest Passes for the November 13 Grand Opening",
+      "VIP Sponsor Dinner & Networking with Sean Michael Crane — November 12 at 7:00 PM",
     ],
   },
   {
@@ -366,7 +366,7 @@ export const SPONSOR_TIERS = [
     blurb:
       "Build brand awareness with the Home Service community through event visibility and official Founding Partner recognition.",
     perks: [
-      "4 General Admission Tickets for the September 12 Grand Opening",
+      "4 General Admission Tickets for the November 13 Grand Opening",
       "Does not include the VIP Sponsor Dinner",
     ],
   },
@@ -384,7 +384,7 @@ export const SPONSOR_TIERS = [
 export const SPONSOR_DINNER = {
   eyebrow: "Exclusive Founding Partner Experience",
   title: "Private Sponsor Dinner & Networking with Sean Michael Crane",
-  dateLabel: "September 11 • 7:00 PM",
+  dateLabel: "November 12 • 7:00 PM",
   body: "An exclusive private evening bringing select Home Service Network TX Founding Partners together with Sean Michael Crane for dinner, conversation, and high-level networking before the Grand Opening.",
   note: "Available exclusively to qualifying Founding Partner sponsors. No additional guests.",
 };
@@ -392,11 +392,11 @@ export const SPONSOR_DINNER = {
 export const SPONSOR_CLARITY = [
   {
     label: "VIP Guest Passes",
-    detail: `${EVENT.eventTitle} — September 12`,
+    detail: `${EVENT.eventTitle} — November 13`,
   },
   {
     label: "VIP Sponsor Dinner",
-    detail: "Private sponsor experience — September 11",
+    detail: "Private sponsor experience — November 12",
   },
 ];
 

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Home Service Network TX Grand Opening | Austin, TX — Sept 12, 2026",
+  title: "Home Service Network TX Grand Opening | Austin, TX — Nov 13, 2026",
   description:
     "The official Grand Opening of Home Service Network TX: an evening of business networking, a featured keynote from Sean Michael Crane, Padel challenges, and giveaways for owners, leaders, and executives across HVAC, Plumbing, Electrical, Roofing, Restoration, Remodeling, Pest Control, Landscaping, and more in Austin, Texas.",
 };
