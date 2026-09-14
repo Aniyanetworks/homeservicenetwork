@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       email,
       phone,
       website,
-      tags: ["hsn", "hsn-austin-sept-12-2026", "hsn sponsor lead"],
+      tags: ["hsn", "hsn-austin-nov-13-2026", "hsn sponsor lead"],
       customFields: {
         company,
         industry,

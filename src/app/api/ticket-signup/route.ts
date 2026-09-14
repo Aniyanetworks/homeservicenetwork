@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       lastName,
       email,
       phone,
-      tags: ["hsn", "hsn-austin-sept-12-2026", "attendee", PRICING.ghlTag],
+      tags: ["hsn", "hsn-austin-nov-13-2026", "attendee", PRICING.ghlTag],
       customFields: {
         company,
         industry,
