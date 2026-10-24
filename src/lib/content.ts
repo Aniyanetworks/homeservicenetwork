@@ -88,6 +88,39 @@ export const PRICING_PHASES = {
 
 export const PRICING = PRICING_PHASES[CURRENT_PHASE];
 
+// ---- /connect landing page (QR code destination) ----
+// The QR code points at the permanent /connect URL, so these destinations can change
+// without reprinting anything. Leave a url empty until it has been confirmed — the
+// page renders that button as "Link coming soon" instead of linking anywhere.
+export const CONNECT = {
+  path: "/connect",
+  heading: "Connect with HSN and Isael García Business",
+  instruction:
+    "Tap each button, then tap Follow on the page that opens. Come back to this page to follow the next one.",
+  buttons: [
+    {
+      id: "hsn_facebook",
+      label: "Follow HSN on Facebook",
+      description: "Stay connected with our community and upcoming events.",
+      url: "https://www.facebook.com/share/19xkF8GQ9q/?mibextid=wwXIfr",
+      prominent: true,
+    },
+    {
+      id: "isael_garcia_business",
+      label: "Follow Isael García Business",
+      description: "Get insights on sales, leadership, and business growth.",
+      url: "https://www.facebook.com/share/1C8nBoo8Wu/?mibextid=wwXIfr",
+      prominent: true,
+    },
+    {
+      id: "hsn_website",
+      label: "Visit the HSN Website",
+      description: "Learn more about HSN.",
+      url: "/",
+      prominent: false,
+    },
+  ],
+};
 
 export const NAV_LINKS = [
   { label: "Why Attend", href: "#why-attend" },
