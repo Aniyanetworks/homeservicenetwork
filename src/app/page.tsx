@@ -8,6 +8,7 @@ import Networking from "@/components/Networking";
 // import PadelExperience from "@/components/PadelExperience";
 import Agenda from "@/components/Agenda";
 import Sponsors from "@/components/Sponsors";
+import SponsorLogos from "@/components/SponsorLogos";
 import TicketSelection from "@/components/TicketSelection";
 import BecomeSponsor from "@/components/BecomeSponsor";
 import VipRegistration from "@/components/VipRegistration";
@@ -29,6 +30,7 @@ export default function Home() {
         <Agenda />
         <TicketSelection />
         <Sponsors />
+        <SponsorLogos />
         <BecomeSponsor />
         <VipRegistration />
         <Faq />

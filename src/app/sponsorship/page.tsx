@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
 import CtaButton from "@/components/CtaButton";
 import SponsorForm from "@/components/SponsorForm";
+import SponsorLogos from "@/components/SponsorLogos";
 import Reveal from "@/components/motion/Reveal";
 import HoverLift from "@/components/motion/HoverLift";
 import { EVENT, SPONSOR_TIERS, SPONSOR_DINNER, SPONSOR_CLARITY } from "@/lib/content";
@@ -41,6 +42,8 @@ export default function SponsorshipPage() {
             </Reveal>
           </div>
         </section>
+
+        <SponsorLogos />
 
         <section className="bg-navy-950/[0.02] py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

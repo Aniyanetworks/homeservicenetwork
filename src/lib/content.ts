@@ -362,6 +362,19 @@ export const AGENDA: AgendaItem[] = [
   },
 ];
 
+// Logos live in /public/sponsors. `dark` marks a logo supplied on a black background so its
+// tile stays black instead of white. "SA" is a placeholder name until the company name is confirmed.
+export const SPONSOR_LOGOS = [
+  { name: "SA", src: "/sponsors/sa-monogram.png", dark: false },
+  { name: "AG Pro Garage Doors", src: "/sponsors/ag-pro-garage-doors.png", dark: false },
+  { name: "Business eXchange Network", src: "/sponsors/business-exchange-network.png", dark: false },
+  { name: "Grande Air Solutions", src: "/sponsors/grande-air-solutions.png", dark: false },
+  { name: "Johnstone Supply", src: "/sponsors/johnstone-supply.png", dark: false },
+  { name: "MAPS Revenue Engine", src: "/sponsors/maps-revenue-engine.png", dark: false },
+  { name: "OBP Group", src: "/sponsors/obp-group.png", dark: false },
+  { name: "State Farm", src: "/sponsors/state-farm.png", dark: true },
+];
+
 export const SPONSOR_TIERS = [
   {
     name: "Presenting Founding Partner",
