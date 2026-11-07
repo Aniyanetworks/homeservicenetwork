@@ -22,7 +22,7 @@ function buildCalendarUrl() {
     text: `${EVENT.name} ${EVENT.eventTitle}`,
     dates: `${toGCalTimestamp(start)}/${toGCalTimestamp(end)}`,
     details: `${EVENT.name} — ${EVENT.city}. ${EVENT.subTagline}`,
-    location: EVENT.city,
+    location: `${EVENT.venue}, ${EVENT.venueAddress}`,
   });
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -81,7 +81,7 @@ export default function ConfirmationPage() {
 
           <Reveal delay={0.15}>
             <p className="mt-6 text-sm text-navy-700/60">
-              Venue: {EVENT.venue}. Parking details will be emailed to registered attendees
+              Venue: {EVENT.venue}, {EVENT.venueAddress}. Parking details will be emailed to registered attendees
               closer to the event.
             </p>
           </Reveal>

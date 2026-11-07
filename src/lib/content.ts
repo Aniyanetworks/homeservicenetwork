@@ -19,7 +19,10 @@ export const EVENT = {
   dateISO: "2026-11-13",
   eventDateTime: "2026-11-13T16:00:00-06:00",
   time: "4:00 PM – 11:00 PM",
-  venue: "Venue to be announced",
+  venue: "Austin Padel Center",
+  venueAddress: "1205 Sheldon Cove, Unit 2-A, Austin, TX 78753",
+  venueMapUrl:
+    "https://www.google.com/maps/search/?api=1&query=Austin+Padel+Center+1205+Sheldon+Cove+Unit+2-A+Austin+TX+78753",
   founder: {
     name: "Isael Garcia",
     title: "Founder, Home Service Network TX",
@@ -373,6 +376,11 @@ export const SPONSOR_LOGOS = [
   { name: "MAPS Revenue Engine", src: "/sponsors/maps-revenue-engine.png", dark: false },
   { name: "OBP Group", src: "/sponsors/obp-group.png", dark: false },
   { name: "State Farm", src: "/sponsors/state-farm.png", dark: true },
+  { name: "Pricys Cakes", src: "/sponsors/pricys-cakes.png", dark: false },
+  { name: "Canvas Advertising", src: "/sponsors/canvas-advertising.png", dark: false },
+  { name: "Latinos en Texas", src: "/sponsors/latinos-en-texas.png", dark: true },
+  // Name not yet confirmed — alt text is a placeholder.
+  { name: "K", src: "/sponsors/k-logo.png", dark: false },
 ];
 
 export const SPONSOR_TIERS = [
@@ -453,7 +461,7 @@ export const FAQS = [
   },
   {
     q: "Where and when is the event held?",
-    a: `Austin, Texas on ${EVENT.date}, from ${EVENT.time}. Exact venue details will be sent after registration.`,
+    a: `${EVENT.venue}, ${EVENT.venueAddress} on ${EVENT.date}, from ${EVENT.time}.`,
   },
   {
     q: "Is this just a networking event?",

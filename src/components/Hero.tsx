@@ -66,6 +66,15 @@ export default function Hero() {
               {EVENT.cityShort} · {EVENT.dateShort} · {EVENT.time}
             </span>
 
+            <a
+              href={EVENT.venueMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block text-sm text-white/70 hover:text-white"
+            >
+              <span className="font-semibold text-white">{EVENT.venue}</span> · {EVENT.venueAddress}
+            </a>
+
             <div className="mt-6">
               <Countdown />
             </div>

@@ -17,6 +17,14 @@ export default function Footer() {
             <p className="text-sm text-white/40">
               {EVENT.city} · {EVENT.date} · {EVENT.time}
             </p>
+            <a
+              href={EVENT.venueMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/60 hover:text-white"
+            >
+              {EVENT.venue} · {EVENT.venueAddress}
+            </a>
             <CtaButton href={LINKS.getTickets} size="lg">
               Get Tickets
             </CtaButton>
