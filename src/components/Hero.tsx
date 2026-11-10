@@ -70,9 +70,17 @@ export default function Hero() {
               href={EVENT.venueMapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 block text-sm text-white/70 hover:text-white"
+              className="mt-5 flex items-start gap-3 rounded-2xl border border-brand-amber-500/40 bg-brand-amber-500/10 p-4 transition-colors hover:bg-brand-amber-500/20"
             >
-              <span className="font-semibold text-white">{EVENT.venue}</span> · {EVENT.venueAddress}
+              <svg viewBox="0 0 20 20" fill="currentColor" className="mt-1 h-6 w-6 shrink-0 text-brand-amber-400">
+                <path d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8.5A2.5 2.5 0 1110 5a2.5 2.5 0 010 5.5z" />
+              </svg>
+              <span>
+                <span className="block text-xl font-extrabold text-white sm:text-2xl">{EVENT.venue}</span>
+                <span className="mt-0.5 block text-base font-medium text-brand-amber-400 sm:text-lg">
+                  {EVENT.venueAddress}
+                </span>
+              </span>
             </a>
 
             <div className="mt-6">

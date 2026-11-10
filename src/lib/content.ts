@@ -57,7 +57,7 @@ export const BUSINESS = {
 // this one switch — nothing else needs to change. (The Stripe link itself is looked up
 // server-side in src/lib/ghl.ts, never exposed here, since this file is also used by client
 // components.)
-export const CURRENT_PHASE: "earlyBird" | "finalEarlyBird" | "regular" = "earlyBird";
+export const CURRENT_PHASE: "earlyBird" | "finalEarlyBird" | "regular" = "finalEarlyBird";
 
 export const PRICING_PHASES = {
   earlyBird: {
@@ -74,7 +74,7 @@ export const PRICING_PHASES = {
     price: 69,
     regularPrice: 99 as number | null,
     savings: null as string | null,
-    urgency: "Price increases to $99 on September 4" as string | null,
+    urgency: null as string | null,
     ctaLabel: "Get My $69 Ticket",
     ghlTag: "HSN – $69 Final Early Bird",
   },

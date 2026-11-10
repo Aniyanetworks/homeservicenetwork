@@ -15,12 +15,12 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <span className="inline-flex items-center rounded-lg px-3 py-1.5 shadow-sm">
             <Image
-              src="/home-service-network-logo.png"
+              src="/home-service-network-logo-removebg-preview.png"
               alt="Home Service Network TX"
               width={747}
               height={337}
               priority
-              className="h-8 w-auto sm:h-9"
+              className="h-16 w-auto sm:h-20"
             />
           </span>
         </Link>
